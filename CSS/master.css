@@ -1,0 +1,258 @@
+* {
+	margin:0;
+	padding:0;
+	/* for photo grid */
+	box-sizing: border-box;
+}
+/* Sitewide topbar and footer*/
+img[class~=center]{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:35px;
+	margin-bottom: 35px;
+	width: 500px;
+}
+.centerBody {
+	width:50%;
+	margin: 25px auto;
+}
+body{
+	margin:0;
+	font-family: sans-serif;
+	text-align: center;
+	color: gray;
+	line-height: 1.5;
+}
+p a{
+	color:grey;
+}
+/* topnav */
+.topnav {
+   margin: 0 auto;
+	width: ___px;
+   text-align: center;
+	overflow: hidden;
+	background-color: white;
+	display: inline;
+	list-style: none;
+}
+.topnav li{
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+.topnav a {
+	text-decoration: none;
+   text-transform: uppercase;
+	letter-spacing: 2px;
+	font-family: sans-serif;
+   color: gray;
+  	display: inline-block;
+   font-size: 13px;
+	padding:10px;
+   margin-left: auto;
+	margin-right: auto;
+}
+.topnav a:hover {
+  color: lightgray;
+}
+ul li>.active {
+  color: lightgray;
+}
+.topnav .icon {
+  display: none;
+  color: gray;
+  font-size: 48px;
+}
+
+/* Topnav dropdown */
+li.dropdown {
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: gray;
+ 	 font-family: sans-serif;
+    padding: 6px 8px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover{
+	background-color: #f1f1f1
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* footer */
+footer{
+	margin-bottom: 35px;
+	margin-top: 20px;
+}
+footer a{
+	width: 25px;
+	color: gray;
+	font-size: 30px;
+	letter-spacing: 15px;
+}
+
+/* End CSS of header and footer */
+/*  */
+/*  */
+/* start CSS body */
+
+
+/* carousel */
+.container{
+	maxwidth:980px;
+	width:70%;
+	margin:0 auto;
+}
+.carousel{
+	margin-top:16px!important;
+	margin-bottom:16px!important;
+}
+.mySlides{
+	display:none;
+}
+
+/* profile image gallery */
+#flexwrap{
+	padding: 0 4px;
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+}
+#flexwrap div{
+	padding:4px;
+	width: 26%;
+}
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.column {
+    -ms-flex: 33.3%; /* IE10 */
+    flex: 33.3%;
+    max-width: 33.3%;
+    padding: 0 4px;
+}
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+.galleryContainer{
+	margin:0% 12%;
+}
+/* inquiry section */
+.inquiry{
+	width: 50%;
+	float: left;
+	text-align:left;
+	padding: 0 15px;
+	font-size: 10pt;
+}
+textarea{
+	border:none;
+	background-color:
+	lightgray;
+	padding:10px;
+	width: 100%;
+}
+input{
+	border:none;
+	background-color:
+	lightgray;
+	padding:10px;
+	width: 100%;
+	margin-top: 1.5px;
+	margin-bottom: 1.5px;
+}
+input[type=submit]{
+	background-color: lightgray;
+	color: darkgray;
+	padding: 12px 20px;
+	border: none;
+	cursor: pointer;
+	width: 150px;
+}
+input[type=submit]:hover{
+	background-color: gray;
+}
+form{
+	width:55%;
+	margin:0 auto;
+}
+input::-webkit-outer-spin-button
+input::-webkit-inner-spin-button input::-ms-outer-spin-button
+input::-ms-inner-spin-button input::-moz-outer-spin-button
+input::-moz-inner-spin-button{
+    -webkit-appearance: none;
+	 -ms- appearance: none;
+	 -moz- appearance: none;
+    margin: 0;
+}
+/* media exceptions */
+@media screen and (max-width: 550px){
+ .column {
+	  -ms-flex: 100%;
+	  flex: 100%;
+	  max-width: 100%;
+ }
+	img[class~=center]{
+		width: 100%;
+	}
+	.container{
+		width: 90%;
+	}
+	.centerBody{
+		width: 100%;
+		margin: 0% 10%;
+	}
+	 .galleryContainer{
+		 margin:0% 2.5%;
+	 }
+	 form{
+		 width: 85%;
+	 }
+}
+@media screen and (max-width: 950px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+	 .galleryContainer{
+		 margin:0% 7.5%;
+	 }
+	 .centerBody{
+		width: 75%;
+	 }
+	 form{
+		 width: 75%;
+	 }
+}
+@media screen and (max-width: 700px){
+	.inquiry
+	{
+		width: 100%;
+		float: none;
+	}
+	form{
+		width: 90%;
+		float: none;
+	}
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Contact us! - Magnolia Ranch</title>
+		<link rel="stylesheet" href="../CSS/master.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" href="../Resources/Images/MagnoliaRanch_icon.png">
+	</head>
+	<body>
+		<!-- Header and topnav -->
+		<a href="../index.html"><img class="center" src="../Resources/Images/MagnoliaRanch.jpg" alt="Magnolia"></a>
+		<div class="topnav" id="myTopnav">
+			<ul>
+	  			<li><a href="../index.html">Home</a></li>
+				<li class="dropdown">
+    				<a href="javascript:void(0)" class="dropbtn">Portfolio</a>
+    				<div class="dropdown-content">
+      				<a href="../HTML/Portfolio_Kelley+Ed.html">Kelley & Ed</a>
+      				<a href="../HTML/Portfolio_Carolyn+Andy.html">Carolyn & Andy</a>
+      				<a href="../HTML/Portfolio_Diana+Steve.html">Diana & Steve</a>
+      				<a href="../HTML/Portfolio_Alison+Matthew.html">Alison & Matthew</a>
+      				<a href="../HTML/Portfolio_Leeann+Dan.html">Leeann & Dan</a>
+    				</div>
+  				</li>
+				<!-- <li><a href="../HTML/Blog.html">Blog</a></li> -->
+	 			<li><a href="../HTML/About.html">About</a></li>
+	  			<li><a href="../HTML/Contact.html" class="active">Contact</a></li>
+			</ul>
+		</div>
+		<div>
+		<br><br>
+		</div>
+
+		<!-- Body -->
+		<p>The team at Magnolia Ranch wants to know about your special event or celebration.<br><br>
+		Please call at <a href="tel:3072011832" style="color:gray">307.201.1832</a> or email <a href="mailto:sami@magnoliaranchjh.com" style="color:gray">sami@magnoliaranchjh.com</a>.
+		<br></p>
+		<form  action="../PHP/FormSubmission.php" method="post">
+			<div class="inquiry">
+				<br>
+				First Name
+					<input type="text" name="first_name" id="fname" placeholder="Your First Name" required><br>
+				Last Name
+					<input type="text" name="last_name" id="lname" placeholder="Your Last Name" required><br>
+				Phone Number
+					<input type="number" name="telephone" pattern="[0-9]*" placeholder="Phone Number"><br>
+				Email
+					<input type="email" name="email" placeholder="Email" required>
+			</div>
+			<div class="inquiry">
+				<br>
+				Venue
+					<input type="text" name="venue" placeholder="Venue"><br>
+				Wedding Coordinator
+					<input type="text" name="coordinator" placeholder="Coordinator"><br>
+				Number of guests
+					<input type="number" name="guests" placeholder="0"><br>
+				Date
+					<input type="date" name="date">
+			</div>
+			<div class="inquiry" style="text-align:left; width:100%; margin-top:6px; margin-bottom:100px">
+				Tell us more about your celebration!<br>
+					<textarea name="moreinfo" rows="20" cols="50" placeholder="Tell us more about your special day!"></textarea><br>
+					<input type="submit" name="submit" value="Submit"><br>
+			</div>
+		</form>
+		<div style="clear:left">
+			<br>
+		</div>
+	</body>
+
+	<footer>
+		<p><a href="https://www.instagram.com/magnoliaranch/"><i class="fa">&#xf16d;</i></a><a href="https://www.pinterest.com/MagnoliaRanchJH/?eq=magnolia%20ranch&etslf=2136"><i class="fa">&#xf0d3;</i></a><br>
+		Follow us on Instagram and Pinterest</p>
+	</footer>
+</html>
