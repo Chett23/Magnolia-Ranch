@@ -196,7 +196,7 @@ form{
 	width:55%;
 	margin:0 auto;
 }
-input::-webkit-outer-spin-button
+/* input::-webkit-outer-spin-button
 input::-webkit-inner-spin-button input::-ms-outer-spin-button
 input::-ms-inner-spin-button input::-moz-outer-spin-button
 input::-moz-inner-spin-button{
@@ -204,7 +204,7 @@ input::-moz-inner-spin-button{
 	 -ms- appearance: none;
 	 -moz- appearance: none;
     margin: 0;
-}
+} */
 /* media exceptions */
 @media screen and (max-width: 550px){
  .column {
@@ -256,3 +256,6 @@ input::-moz-inner-spin-button{
 		float: none;
 	}
 }
+
+
+/* https://script.google.com/macros/s/AKfycbxN1VXKT3VFKUnPDNEHcUpKYdHS-crMxnx-ZTE6uckGo50ECYI/exec */

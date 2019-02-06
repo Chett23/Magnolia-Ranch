@@ -38,7 +38,7 @@
 		Please call at <a href="tel:3072011832" style="color:gray">307.201.1832</a> or email <a href="mailto:sami@magnoliaranchjh.com" style="color:gray">sami@magnoliaranchjh.com</a>.
 		<br></p>
 
-		<form  action="https://docs.google.com/forms/d/e/1FAIpQLSc8H22604VkuqInxhONcZM1CdNFjhVdx-oGEKSrt5E0XnWoJQ/formResponse" method="post">
+		<!-- <form  action="https://docs.google.com/forms/d/e/1FAIpQLSc8H22604VkuqInxhONcZM1CdNFjhVdx-oGEKSrt5E0XnWoJQ/formResponse" method="post">
 			<div class="inquiry">
 				<br>
 				First Name
@@ -66,6 +66,35 @@
 					<textarea name="entry.839337160" rows="20" cols="50" placeholder="Tell us more about your special day!"></textarea><br>
 					<input type="submit" name="submit" value="Submit"><br>
 			</div>
+		</form> -->
+		<form id="magnolia-form">
+			<div class="inquiry">
+				<br>
+				First Name
+					<input type="text" name="first_name" placeholder="Your First Name" required><br>
+				Last Name
+					<input type="text" name="last_name" placeholder="Your Last Name" required><br>
+				Phone Number
+					<input type="number" name="phone_number" pattern="[0-9]*" placeholder="Phone Number"><br>
+				Email
+					<input type="email" name="email" placeholder="Email" required>
+			</div>
+			<div class="inquiry">
+				<br>
+				Venue
+					<input type="text" name="venue" placeholder="Venue"><br>
+				Wedding Coordinator
+					<input type="text" name="coordinator" placeholder="Coordinator"><br>
+				Number of guests
+					<input type="number" name="guests" placeholder="0"><br>
+				Date
+					<input type="date" name="date" placeholder="mm/dd/yyyy">
+			</div>
+			<div class="inquiry" style="text-align:left; width:100%; margin-top:6px; margin-bottom:100px">
+				Tell us more about your celebration!<br>
+					<textarea name="more_info" rows="20" cols="50" placeholder="Tell us more about your special day!"></textarea><br>
+					<input type="submit" id="submit-form" value="Submit"><br>
+			</div>
 		</form>
 		<div style="clear:left">
 			<br>
@@ -76,4 +105,20 @@
 		<p><a href="https://www.instagram.com/magnoliaranch/"><i class="fa">&#xf16d;</i></a><a href="https://www.pinterest.com/MagnoliaRanchJH/?eq=magnolia%20ranch&etslf=2136"><i class="fa">&#xf0d3;</i></a><br>
 		Follow us on Instagram and Pinterest</p>
 	</footer>
+	<script type="text/javascript">
+		var $form = $('form#magnolia-form'),
+    	url = 'https://script.google.com/macros/s/AKfycbxN1VXKT3VFKUnPDNEHcUpKYdHS-crMxnx-ZTE6uckGo50ECYI/exec'
+
+		$('#submit-form').on('click', function(e) {
+  			e.preventDefault();
+  			var jqxhr = $.ajax({
+    			url: url,
+    			method: "GET",
+    			dataType: "json",
+    			data: $form.serializeObject()
+  			}).success(
+    		window.location.href="HTML/ThankYou.html"
+  			);
+		})
+	</script>
 </html>
